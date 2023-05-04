@@ -16,6 +16,7 @@ function Ninja(nome, arma) {
 }
 
 
+
 function Inimigo(nome) {
     this.nome = nome
     this.vivo = true
