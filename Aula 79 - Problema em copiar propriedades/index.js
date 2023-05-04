@@ -12,6 +12,7 @@ function extend(Filho, Pai) {
   function Veiculo() {}
   
   Veiculo.prototype.carenagem = "aço";
+  Veiculo.prototype.itens = ['teto solar', 'blindagem', 'motor turbo']
   Veiculo.prototype.ligar = function () {
     console.log("O veículo ligou");
   };
@@ -21,6 +22,7 @@ function extend(Filho, Pai) {
   }
   
   Trem.prototype.vagoes = 50;
+
   
   function Carro() {}
   
@@ -32,6 +34,9 @@ function extend(Filho, Pai) {
   extend(Trem,Veiculo)
   extend(Carro,Veiculo)
   
+
+  Trem.prototype.itens.push('janelas fixas');
+
   let trem = new Trem("trem bala");
   let ferrari = new Carro();
   let trembala = new Trem("Trem Bala");
@@ -49,3 +54,4 @@ function extend(Filho, Pai) {
   ferrari.ligar();
   
   console.log(trem)
+  
