@@ -15,13 +15,18 @@ function Carro() {}
 
 Carro.prototype.pneus = 4;
 
-Trem.prototype = new Veiculo();
+// Copiando só o prototype, em vez de instanciar uma classe
+Trem.prototype = Veiculo.prototype;
 
 Carro.prototype = new Veiculo();
 
 let trem = new Trem("trem bala");
-
 let ferrari = new Carro();
-
+let trembala = new Trem('Trem Bala')
 
 trem.ligar()
+
+trembala.ligar()
+ferrari.ligar()
+
+console.log(trembala.carenagem)
